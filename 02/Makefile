@@ -1,8 +1,7 @@
 objects = main.o src/diagnosis.o src/buffer.o src/scanner.o src/tokens.o src/symboltable.o
-flags = -Wall -Werror
 
 moco : $(objects)
-		cc -o $(flags) moco $(objects)
+		cc -o moco $(objects)
 
 main.o : include/diagnosis.h include/buffer.h include/scanner.h include/tokens.h
 src/diagnosis.o : include/diagnosis.h include/scanner.h
